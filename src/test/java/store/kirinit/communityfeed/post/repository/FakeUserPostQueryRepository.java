@@ -3,6 +3,7 @@ package store.kirinit.communityfeed.post.repository;
 import java.util.ArrayList;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 import store.kirinit.communityfeed.post.repository.entity.post.PostEntity;
@@ -10,6 +11,7 @@ import store.kirinit.communityfeed.post.repository.post_queue.UserPostQueueQuery
 import store.kirinit.communityfeed.post.ui.dto.GetPostContentResponseDto;
 
 @Repository
+@Primary
 @Profile("test")
 @RequiredArgsConstructor
 public class FakeUserPostQueryRepository implements UserPostQueueQueryRepository {
